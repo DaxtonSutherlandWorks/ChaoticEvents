@@ -3,58 +3,8 @@ import "../styles/About.css";
 
 const About = () => {
 
-    const [personalClicks, setPersonalClicks] = useState(0);
-    const [popup, setPopup] = useState(false);
-    const [gitHubPassword, setGitHubPassword] = useState();
-
-    const personalBoxClick = () => 
-        {
-            setPersonalClicks(personalClicks + 1);
-        
-            if (personalClicks === 4) {
-                setPopup(true);
-                setPersonalClicks(0);
-            }
-        }
-        
-    const handlePopUpButton = (event) =>
-        {
-            event.preventDefault();
-
-            // Congratulations! You found where I leak the password to my source code in my code!
-            // Unfortunately, this security error doesn't do anything since you're already
-            // reading my source code. Just one more Easter Egg for those who read every bit.
-            if (gitHubPassword === "GreatCandidate,Is#1")
-            {
-                //TODO: Add Github Link and welcome text
-                console.log("YAY");
-            }
-        }
-
-    const handleLeave = () =>
-    {
-        setPopup(false);
-    }
-
     return ( 
         <div>
-            {popup && <div className="popup-container">
-                        <form className="confirm-popup" onSubmit={handlePopUpButton}>
-                            <h1 style={{marginBottom: '30px'}}>Enter Passcode Here to be Taken to my Source Code:</h1>
-                            <input type="password"
-                                onChange={(elem) => setGitHubPassword(elem.target.value)}
-                                value={gitHubPassword}
-                                placeholder=" Password"
-                            />
-                            <br></br>
-                            <button type="submit">Submit</button>
-                            <br></br>
-                            <br></br>
-                            <p> -or- </p>
-                            <br></br>
-                            <button type="button" onClick={handleLeave}>Run Away</button>
-                        </form>
-                      </div>}
             <h1>About</h1>
             <br />
             <div className="about-card" style={{"background-color" :"#ecd68b"}}>
@@ -155,9 +105,9 @@ const About = () => {
                 <br />
                 <p>
                     ChaoticEvents is a free service with no ads. It will never be ruined by advertisements or a paywall. I receive no outside funding, and any information you enter into this
-                    website is not for sale. Any solicititations from data brokers for the purchase of your information will be answered with disproportionate and unreasonable hostility.
+                    website is not for sale. Any solicititations from data brokers for the purchase of your information will be answered with an unreasonably enthusiastic, "NO!".
                     I made this project for fun, practice, and because it is something that I though would be useful for me and my friends. However, if you feel that ChaoticEvents has brought you
-                    any value and wish to help keep the lights on, I will begrudingly accept tips through the button below. The sarcastic tone of this paragraph aside, I do deeply thank anyone who makes
+                    any value and wish to help keep the lights on, I will begrudingly accept tips through the button below. I do deeply thank anyone who makes
                     a donation.
                 </p>
                 <div className="paypal-container">
@@ -180,8 +130,7 @@ const About = () => {
                     and I hope it proves useful to a few people. This is also my first foray into the MERN stack, a learning experience I have loved every minute of.
                     Lastly, I know the style of this web app is a lot different than most of what you see on the internet these days. I really do miss the pop and color
                     of the older internet, there are more colors than blue, white, and gray believe it or not! I hope my project brought some color into your day!
-                    Please keep an eye on me in the future and see what else I publish! And by the way, if you happen to have my resume and want to see my source code,
-                    now would be a good time to click this box five times.
+                    Please keep an eye on me in the future and see what else I publish!
                 </p>
             </div>
             <br />
