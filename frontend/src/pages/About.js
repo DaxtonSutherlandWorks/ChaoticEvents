@@ -122,7 +122,7 @@ const About = () => {
                 </div>
             </div>
             <br />
-            <div className="about-card" style={{"background-color" :"#709dff"}} onClick={personalBoxClick}>
+            <div className="about-card" style={{"background-color" :"#709dff"}}>
                 <h2>A Personal Word</h2>
                 <br />
                 <p>
