@@ -1,0 +1,41 @@
+html * {
+    font-family: Garamond, sarif !important;
+    margin: 0;
+}
+
+body {
+  background-color: #fab6b8;
+}
+
+.page-content {
+  padding: 10px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.content-card {
+  width: 80%;
+  margin-top: 130px;
+  margin-inline: auto;
+  background-color: white;
+  padding: 2%;
+  border: 2px solid #9c9c9c;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px 5px #636363;
+}
+
+@media (max-width: 900px)
+{
+  .content-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .content-card {
+    width: 95%;
+  }
+}

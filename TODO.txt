@@ -1,0 +1,166 @@
+TODO:
+
+GitHub and Link
+
+Finished:
+X EventList Data Pagination
+    X - List Browser
+X Create graphic for logo
+X Mobile Formatting
+X Hamburger Item Links
+X About Page
+X Redirect after list deletion.
+X List Progress restoration is buggy
+X Link to personal page in footer, flesh out
+X Fix password stats error spacing
+X Redo every query (except user profiles) made with username to use user id... Like it should have been to begin with.
+X Make logout button collapse hamburger menue and return to homepage
+X Rework Hamburger menu positioning/sizing.
+X Clear eventList interaction entry when setting favor to 0 and list not saved.
+X Account button functionality
+X - Profile Page
+X - Update the User model to include:
+    X - Times user's lists were saved
+    X - Total likes recieved
+    X - A snapshot
+X - Make route to get profile object: {userName, snapshot, totalSaves, created, likesEarned}
+X - Import this object to the Profile page
+X - Update the interactions controller to track total likes/saves.
+X - Update lists to store total saves
+X - Update list creation/deletion to increment user's total lists.
+X - Update list deletion to affect user's total likes/saves
+X - Edit button functionality.
+    X - Change URL to fit new UN on updating UN
+    X - Display errors when changing UN
+    X - Force relogin when updating userName
+X - Delete button functionality.
+     X - Update user interactions for each of owner's Lists
+X - Cancel Edits
+X- Account button redirects to user page when on another user's page.
+X Update general look to use white cards over secondary color background
+X Bug where opening a list while not logged in crashes program (Fetching a profile was behind auth controls, didn't need to be)
+X Check if removing the User's saved lists property broke anything (it didn't), remove related functions if not.
+X Rework how interactions are updated to be more readable.
+X Update EventList Controller to actually use the model for User.
+x Update User Controller too.
+X Rating buttons are buggy, going into negatives somehow. (The index for the new interaction on an unrated list was statically set to zero... That was dumb.)
+X Lists saving when rated bug? Fetcher is the likely suspect (CORRECT).
+X Revisit list deletion to account for saved lists and interactions.
+X Rename savedLists in users to ownedLists, we're treading duplicate ground.
+X Test that updating a list updates it for the owner
+X Ability to like/dislike lists
+X Dynamically toggle save list button to unsave
+X Ability to save lists on details page
+X Jump to top of details page when entering
+X Functionality to delete own list in ListView
+X Fix everything that broke when you stopped leaking user info...
+X Rework how user is stored in local storage, actually fetch it during login so it's private
+X Seperate functionality to update an existing list when CreateList is in edit mode.
+X CreateList page reuse as edit list page with a passed parameter
+X CreateList submit edits button while editing and event.
+X CreateList page edit event button
+X Logout button returns to homepage
+X Visible Saved Lists
+X Empty Collapsible list message
+X Dynamic Sort Button
+X Reverse Sort on button click
+X Cancel Sort Button and return to original array at time of sort
+X List Sorting
+ - Old/New
+ - Alphabetic
+ - Event Count
+ - Rating
+X Display list creation date.
+X Button to clear search
+X List Searching
+ - Title
+ - Author
+ - Description
+ - Tags
+X Guess what dummy, tags don't actually save to lists. Fix that!
+X Acutally display tags on lists so you can validate your searches, it would be kind of helpful believe it or not...
+X Fix increase page number button disabling bug regarding decimals (Yuck)
+X Fix broken collapsible-content transition
+X Pagination for CollapsibleEventLists
+X Axe the eventList context, project evolved beyond it.
+X Implement list color schemes
+X Proper population of front page lists:
+ - Public List Browser
+ - User Lists
+X Scrub any remains of border colors, looked terrible.
+X Feedback on list submit error/success.
+X Reset CreateList on success.
+X Submitting new Lists to database.
+X Surprise, you never handled JWTs expiring! Check for expiration when loading the home page.
+X Load WIPList into events on page load.
+X Store most recent unsubbed/failed newList in user account as backup.
+X Ability to delete tags from lists
+X Ability to add tags to lists
+X Close Hamburger after navigating
+X Create Event List wrapping
+X Retool EventCards to handle color themes
+x Dynamic EventList themes.
+X Theme colors for lists
+X Add tags array to lists
+X You're having too much fun! Slow down, go back and touch up comments.
+X Allow die number to adjust for deleted events
+X Add delete event feature in list Creation
+X Test User account support
+X Login Bug (Username req!?)
+X Format NewList display box
+x List Creation Form Clean Up:
+ - Style add button
+ - Reset Current Color
+X Adding Events to a list on CreateList Page
+X ColorSelector:
+ - Style to look good
+ - Do expand container
+ - Background colors slide in on hover
+X Dynamic hamburger menu for logged in/out
+X Dynamic Main Screen for logged in/out
+X Give Home screen 3 lists:
+ - My lists
+ - Saved lists
+ - Popular lists
+X Add Arrays to User:
+ - Created lists
+ - Saved lists
+ - Rated lists
+X Add User fields to lists:
+ - author name
+X ListView Styling
+X Deselect Events
+X Roll for Events
+X Functionality to reset crossed out events
+X Grey out selected event from event list
+X ListView Event Selection and Current Event functionality
+X Make Event Cards
+X Make a List View page
+X Animate collapsible lists
+X Login/Signiup error styling
+X Better login button
+X For GOODNESS sake, break up css sheet by page please
+X Signup/Login form field styling
+X Add Signin/Up Page
+X Set up Routing and Links
+X Sign up/Log in/ Log out functionality
+X CollapsibleEventList functionality/style
+X New Colors
+X Footer
+X Navbar
+X Add headers to files
+X Test CRUD Routes
+X Update everything to use the new database/routes.
+X Make a generic back end template.
+
+Dummied:
+Expand WIPList to cover changes to list traits in addition to events. -Added a lot of bloat for little user effort saved.
+Make a collection for events
+Change events field in Event List to reference Events colleciton
+
+EventList Data Pagination
+(These agenda items were dumb. It is very unlikely users will make/save enough lists top crash their page,
+and since list pagination was added near the end there is very limited support for it that does not cover these cases well at all.)
+    - My Lists
+    - Saved Lists
+    - User Page Lists

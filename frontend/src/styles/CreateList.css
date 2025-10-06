@@ -1,0 +1,309 @@
+.popup-container {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(128, 128, 128, 0.74);
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-delete-popup {
+    position: relative;
+    text-align: center;
+    width: 50%;
+    background-color: #ffffff;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px black;
+}
+
+.restore-message {
+    width: 60%;
+    margin: auto;
+    margin-block: 10px;
+    padding: 5px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: 5px double black;
+    border-radius: 5px;
+}
+
+.event-form-container {
+    margin-inline: 20%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.event-form-container h2 {
+    background-color: #C73032;
+    border-top-left-radius: 11px;
+    color: white;
+}
+
+.event-form-container label {
+    display: block;
+    font-size: x-large;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.event-form-container textarea {
+    width: 80%;
+    height: 200px;
+    font-size: large;
+}
+
+.add-button {
+    min-width: 150px;
+    height: 50px;
+    border: 4px solid black;
+    border-radius: 40px;
+    font-size: larger;
+    margin: 10px;
+    cursor: pointer;
+    transition: border .2s;
+}
+
+.add-button:hover {
+    border: 6px solid black;
+    transition: border .2s;
+}
+
+.color-field {
+    font-size: larger;
+    width: 60%;
+}
+
+.fire-option:hover {
+    box-shadow: 0 0 10px 100px yellow inset;
+}
+
+.list-title {
+    background-color: #C73032;
+    text-align: center;
+    font-size: x-large;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+}
+
+.list-title label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.list-title input {
+    margin-inline: 5%;
+}
+
+.list-description-container {
+    color: white;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+.list-description-container label {
+    margin: 2%;
+}
+
+.list-description-container textarea {
+    width: 80%;
+    height: 100px;
+    margin: 2%;
+}
+
+.new-events-box {
+    margin-top: 0;
+    padding-top: 10px;
+    background-color: #fab6b8;
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 10px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    grid-auto-rows: auto;
+}
+
+.new-events-box h1 {
+    position: relative;
+    left: 50%;
+    padding-bottom: 20px;
+}
+
+.new-events-box-footer {
+    padding: 2%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #C73032;
+    font-size: x-large;
+    color: white;
+    display: grid;
+    grid-template-columns: fit-content(20%) minmax(0, 1fr);
+    column-gap: 20px;
+    align-items: center;
+}
+
+.new-events-box-footer button {
+    min-width: 150px;
+    height: 50px;
+    border: 4px solid black;
+    border-radius: 40px;
+    font-size: larger;
+    margin: 10px;
+    cursor: pointer;
+    transition: border .2s;
+}
+
+.new-events-box-footer button:hover {
+    border: 6px solid black;
+    transition: border .2s;
+}
+
+.tag-input-container {
+    margin: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 10px double;
+    border-radius: 10px;
+    max-height: 200px;
+    max-width: 200px;
+    min-width: 200px
+}
+
+.tag-input-container input {
+    height: 30px;
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.tag-container {
+    display: grid;
+    color: black;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: fit-content(25%);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.tag-container img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.tag-container div {
+    padding: 5px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+.save-button-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 4px dashed black;
+    text-align: center;
+}
+
+.save-button-container button {
+    min-width: 150px;
+    height: 50px;
+    border: 4px solid black;
+    border-radius: 40px;
+    font-size: larger;
+    margin: 10px;
+    cursor: pointer;
+    transition: border .2s;
+}
+
+.save-button-container button:hover {
+    border: 6px solid black;
+    transition: border .2s;
+}
+
+.result-box {
+    width: 60%;
+    margin: auto;
+    margin-block: 10px;
+    padding: 5px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: 5px double black;
+    border-radius: 5px;
+}
+
+@media (min-width: 1600px) {
+    .tag-container {
+        display: grid;
+        color: black;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: fit-content(25%);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .list-title {
+        grid-template-columns: 1fr;
+    }
+
+    .list-title div {
+        padding-bottom: 20px;
+    }
+
+    .tag-input-container {
+        max-height: 150px;
+        max-width: 150px;
+        min-width: 150px
+    }
+
+    .tag-input-container input {
+        max-width: 130px;
+    }
+
+    .tag-input-container button {
+        font-size: 22px;
+        max-width: 130px;
+        max-height: 40px;
+        margin: 5px;
+    }
+
+    .new-events-box-footer h2 {
+        font-size: 30px;
+    }
+
+    .tag-container {
+        grid-template-columns: auto;
+
+        row-gap: 10px;
+    }
+}

@@ -1,0 +1,108 @@
+.selectable-event-card {
+    background-color: #ffffff;
+    margin: 2%;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: box-shadow .4s, left .2s, top .2s;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    cursor: pointer;
+    text-align: left;
+    font-size: large;
+}
+
+.selectable-event-card h2 {
+    padding-left: 5px;
+    padding-right: 15px;
+    margin-right: 10px;
+    color: white;
+    display:inline;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 10px;
+}
+
+.selectable-event-card p {
+    margin: 10px;
+}
+
+.selectable-event-card:hover {
+    position: relative;
+    top: -4px;
+    left: -4px;
+    box-shadow: 10px 10px 10px 1px #000000b4;
+}
+
+.unselectable-event-card {
+    background-color: #c5c5c5;
+    margin: 2%;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: large;
+    text-align: left;
+    text-decoration: line-through;
+}
+
+.unselectable-event-card h2 {
+    position: relative;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin-right: 10px;
+    color: white;
+    display:inline;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 10px;
+}
+
+.unselectable-event-card p {
+    margin: 10px;
+}
+
+.static-event-card {
+    background-color: #ffffff;
+    margin: 2%;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: left;
+    font-size: large;
+    max-width: 95%;
+}
+
+.static-event-card h2 {
+    padding-left: 5px;
+    margin-right: 10px;
+    padding-right: 15px;
+    color: white;
+    display:inline;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+.static-event-card p {
+    margin: 10px;
+}
+
+.title-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.event-action-button {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.5s;
+}
+
+.event-action-button:hover {
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 2px rgb(128, 128, 128);
+}

@@ -1,0 +1,172 @@
+.form-card-left {
+    font-size: 2em;
+    text-align: center;
+    width: 45%;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: border .2s, box-shadow .2s;
+  }
+  
+  .form-card-left:focus-within {
+    border-width: 0px;
+    box-shadow: 0px 0px 0px 10px black;
+    transition: border .2s, box-shadow .2s;
+  }
+  
+  .form-card-left form{
+    display: inline-block;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .form-card-left h3{
+    background-color: #C73032;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+  }
+  
+  .form-card-left input {
+    min-width: 80%;
+    max-width: 100%;
+    border: 4px solid #C73032;
+    border-radius: 30px;
+    transition: border .2s, box-shadow .2s;
+    font-size: 22px;
+  }
+  
+  .form-card-left input:focus {
+    outline: none;
+    border-width: 0px;
+    box-shadow: 0px 0px 5px 10px #c73032b6;
+    transition: border .2s, box-shadow .2s;
+  }
+  
+  .form-card-left form button{
+    background-color: #C73032;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: 4px solid black;
+    border-radius: 40px;
+    box-shadow: 5px 5px 2px 2px #000000;
+    transition: box-shadow 0.2s, border-width 0.2s;
+    font-size: large;
+    font-weight: bolder;
+  }
+  
+  
+  .form-card-left button:hover {
+    box-shadow: 0px 0px 0px 0px #000000;
+    border-width: 8px;
+    transition: box-shadow 0.2s, border-width 0.2s;
+  }
+  
+  .form-card-right {
+    font-size: 2em;
+    text-align: center;
+    width: 45%;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: border .2s, box-shadow .2s;
+    margin-left: auto;
+  }
+  
+  .form-card-right:focus-within {
+    border-width: 0px;
+    box-shadow: 0px 0px 0px 10px black;
+    transition: border .2s, box-shadow .2s;
+  }
+  
+  .form-card-right h3{
+    background-color: #C73032;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+  }
+  
+  .form-card-right form{
+    display: inline-block;
+    width: 80%;
+  }
+  
+  .form-card-right input {
+    min-width: 80%;
+    max-width: 100%;
+    font-size: 22px;
+    border: 4px solid #C73032;
+    border-radius: 30px;
+    transition: border .2s, box-shadow .2s;
+  }
+  
+  .form-card-right input:focus {
+    outline: none;
+    border-width: 0px;
+    box-shadow: 0px 0px 5px 10px #c73032b6;
+    transition: border .2s, box-shadow .2s;
+  }
+  
+  .form-card-right button{
+    background-color: #C73032;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: 4px solid black;
+    border-radius: 40px;
+    box-shadow: 5px 5px 2px 2px #000000;
+    transition: box-shadow 0.2s, border-width 0.2s;
+    font-size: large;
+    font-weight: bolder;
+  }
+  
+  .form-card-right button:hover {
+    box-shadow: 0px 0px 0px 0px #000000;
+    border-width: 8px;
+    transition: box-shadow 0.2s, border-width 0.2s;
+  }
+
+  .login-signup-error {
+    background-color: #cccffc;
+    margin: 10px;
+    border: 5px double #a5abff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 5px #cccffc;
+  }
+
+  .login-container {
+    display: flex;
+    padding: 50px;
+  }
+
+  @media (max-width: 880px) {
+
+    .form-card-right form {
+      width: 85%;
+    }
+
+    .form-card-left form {
+      width: 85%;
+    }
+
+    .form-card-left input {
+      font-size: 18px;
+    }
+
+    .form-card-right input {
+      font-size: 18px;
+    }
+
+    .login-container {
+      padding: 5px;
+    }
+
+    .form-card-left form button {
+      width: 150px;
+      font-size: 20px;
+    }
+
+    .form-card-right form button {
+      width: 150px;
+      font-size: 20px;
+    }
+  }

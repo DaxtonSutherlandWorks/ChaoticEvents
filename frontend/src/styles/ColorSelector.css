@@ -1,0 +1,126 @@
+.color-button-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.color-button-container button{
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    width: 50%;
+    text-align: center;
+    font-size: x-large;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: 2px solid rgb(165, 165, 165);
+}
+
+.color-button-container p {
+    width: 50%;
+    top: 50%;
+}
+
+.color-button-container img {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+}
+
+.color-drop-down {
+    width: 50%;
+    margin: auto;
+    font-size: large;
+    border: 2px solid rgb(165, 165, 165);
+    background-color: rgb(219, 219, 219);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.color-drop-down div {
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.color-drop-down div:hover {
+    padding: 3px;
+    cursor: pointer;
+    color: white;
+    font-size: x-large;
+    background-position: left;
+}
+
+.option-fire {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #e7623e 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-gold {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #b59e54 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-rogue {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #ab6dac 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-emerald {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #507f62 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-silver {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #91a1b2 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-ash {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #555752 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-moss {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #7a853b 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-blood {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #992e2e 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-rust {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #7f513e 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-iris {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #7b469b 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-copper {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #d59139 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-sky {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #51a5c5 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-cobalt {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #2a50a1 50%) right;
+    background-size: 200% 100%;
+}
+
+.option-default {
+    background: linear-gradient(to left, rgb(219, 219, 219) 50%, #C73032 50%) right;
+    background-size: 200% 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
