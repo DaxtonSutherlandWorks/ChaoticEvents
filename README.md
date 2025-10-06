@@ -1,1 +1,1 @@
-Congratulations, you have gained access to the source code for my ChaoticEvents project listed on my resume and personal website! Please feel free to peruse everything found here. Though there is a todo file here, it is just left as a record of my thought process.
+This is the source code for my ChaoticEvents project listed on my resume and personal website! Please feel free to peruse everything found here. Though there is a todo file here, it is just left as a record of my thought process.
