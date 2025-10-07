@@ -9,5 +9,13 @@
     "mongoose": "^8.9.3",
     "nodemon": "^3.1.9",
     "validator": "^13.12.0"
-  }
+  },
+
+  "scripts": {
+    "start": "node server.js",
+    "frontend-build": "cd ../client && npm install && npm run build",
+    "backend-build": "npm install",
+    "build": "npm run frontend-build && npm run backend-build",
+    "dev":   "nodemon server.js"
+}
 }
