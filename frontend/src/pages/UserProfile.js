@@ -31,7 +31,7 @@ const UserProfile = () => {
         // Fetcher for only public events
         const fetchPublicUserEventLists = async () => {
 
-            const response = await fetch('http://localhost:4000/api/eventLists/userPublic/'+userName);
+            const response = await fetch('https://chaoticevents.onrender.com/api/eventLists/userPublic/'+userName);
     
             const json = await response.json();            
 
@@ -42,7 +42,7 @@ const UserProfile = () => {
 
         // Fetcher for user profile
         const fetchUserProfile = async () => {
-            const response = await fetch('http://localhost:4000/api/user/getProfile/'+userName, {
+            const response = await fetch('https://chaoticevents.onrender.com/api/user/getProfile/'+userName, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -71,7 +71,7 @@ const UserProfile = () => {
 
     // User profile fetcher redefined here because UseEffects are funny with async functions
     const fetchUserProfile = async () => {
-            const response = await fetch('http://localhost:4000/api/user/getProfile/'+userName, {
+            const response = await fetch('https://chaoticevents.onrender.com/api/user/getProfile/'+userName, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -99,7 +99,7 @@ const UserProfile = () => {
 
         const updatePayload = {userID: user._id, mode: "SNAPSHOT", snapshot: document.getElementById("snapshot-field").value.trim()};
 
-        const response = await fetch('http://localhost:4000/api/user/updateProfile', {
+        const response = await fetch('https://chaoticevents.onrender.com/api/user/updateProfile', {
             method: 'PATCH',
             body: JSON.stringify(updatePayload),    
             headers: {
@@ -128,7 +128,7 @@ const UserProfile = () => {
 
         const updatePayload = {userID: user._id, mode: "USERNAME", userName: document.getElementById("username-field").value};
 
-        const response = await fetch('http://localhost:4000/api/user/updateProfile', {
+        const response = await fetch('https://chaoticevents.onrender.com/api/user/updateProfile', {
             method: 'PATCH',
             body: JSON.stringify(updatePayload),    
             headers: {
@@ -188,7 +188,7 @@ const UserProfile = () => {
         event.preventDefault();
 
         if (event.nativeEvent.submitter.id ==="popup-yes") {
-            const response = await fetch('http://localhost:4000/api/user/deleteUser', {
+            const response = await fetch('https://chaoticevents.onrender.com/api/user/deleteUser', {
             method: 'DELETE',
             body: JSON.stringify({userID: user._id}),    
             headers: {
