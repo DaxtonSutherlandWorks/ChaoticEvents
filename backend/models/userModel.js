@@ -197,7 +197,7 @@ userSchema.statics.getSavedEventLists = async function(email) {
         }
     }
 
-    const response = await fetch('http://localhost:4000/api/eventLists/matches', {
+    const response = await fetch('https://chaoticevents.onrender.com/api/eventLists/matches', {
         method: 'POST',  
         body: JSON.stringify(findIDs),        
         headers: {
