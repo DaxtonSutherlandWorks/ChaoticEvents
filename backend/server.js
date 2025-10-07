@@ -15,6 +15,7 @@ const app = express();
 
 // Middleware
 app.use(cors('localhost:3000'));
+app.use(cors('https://chaoticevents.onrender.com'));
 app.use(express.json());
 
 app.use((req, res, next) => {
