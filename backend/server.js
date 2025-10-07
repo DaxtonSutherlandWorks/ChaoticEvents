@@ -10,12 +10,18 @@ const userRoutes = require('./routes/user');
 const express = require('express');
 const mongoose = require('mongoose');
 
+const allowedOrigins = ["http://localhost:3000", "https://chaoticevents-frontend.onrender.com/"];
+
 // Express app
 const app = express();
 
+
+
 // Middleware
-app.use(cors('localhost:3000'));
-app.use(cors('chaoticevents-frontend.onrender.com'));
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true,
+}));
 app.use(express.json());
 
 app.use((req, res, next) => {
