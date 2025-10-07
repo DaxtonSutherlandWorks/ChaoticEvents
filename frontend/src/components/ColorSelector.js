@@ -70,7 +70,7 @@ const ColorSelector = forwardRef(({setParentTitleColor}, ref) => {
         <div className="color-button-container">
             <button type='button' onClick={handleOpenClick} style={open ? {borderBottomRightRadius: '0px', borderBottomLeftRadius: '0px', outlineColor: 'black'} : {borderBottomRightRadius: '5px', borderBottomLeftRadius: '5px'}}>
                 <p>{selectedColor}</p>
-                <img src={require("./..\\img\\collapseArrow.png")} alt="" />
+                <img src={require("./../img/collapseArrow.png")} alt="" />
                 
             </button>
             {open && 

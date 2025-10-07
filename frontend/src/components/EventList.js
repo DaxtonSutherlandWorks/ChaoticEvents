@@ -39,9 +39,9 @@ const EventList = ({ eventList }) => {
                         <p>Author: {eventList.author}</p>
                         <br />
                         <span>
-                            <img src={require("./..\\img\\likeWhite.png")} alt="" />
+                            <img src={require("./../img/likeWhite.png")} alt="" />
                             <p>{eventList.rating.join('/')}</p>
-                            <img src={require("./..\\img\\dislikeWhite.png")} alt="" />
+                            <img src={require("./../img/dislikeWhite.png")} alt="" />
                         </span>
                         <br />
                         <p>Published: {createDate.toLocaleDateString()}</p>
@@ -50,7 +50,7 @@ const EventList = ({ eventList }) => {
                     {eventList.tags.length > 0 && <div className='card-footer' style={{backgroundColor: eventList.colorTheme[0]}}>
                         {eventList.tags.map((tag) => (
                                     <div style={{backgroundColor: eventList.colorTheme[1]}}>
-                                        <img src={require("./..\\img\\hashTag.png")} alt="" />
+                                        <img src={require("./../img/hashTag.png")} alt="" />
                                         <p>{tag}</p>
                                     </div>
                                 ))}

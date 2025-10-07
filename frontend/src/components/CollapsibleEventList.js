@@ -234,7 +234,7 @@ const CollapsibleEventList = ({title, eventLists, getOlder, getNewer}) => {
                 backgroundColor: '#C73032'}
             : 
             {   }} onClick={handleCollapseClick}>
-                <img style={isActive ? {rotate: '180deg'} : {} } src={require("./..\\img\\collapseArrow.png")} alt="" />
+                <img style={isActive ? {rotate: '180deg'} : {} } src={require("./../img/collapseArrow.png")} alt="" />
                 <h2>{title}</h2>
             </button>
             <div className="collapsible-content" style={isActive ? { height: 'auto'} : {height: '0px'}}>
@@ -250,9 +250,9 @@ const CollapsibleEventList = ({title, eventLists, getOlder, getNewer}) => {
                                 <option value="events">Number of Events</option>
                                 <option value="date">Creation Date</option>
                             </select>
-                            {sortState === 0 && <button type="submit"><img src={require("./..\\img\\sort.png")} alt="" /></button>}
-                            {sortState !== 0 && <button type="button" onClick={reverseSort}><img src={require("./..\\img\\upArrow.png")} style={sortState === 1 ? {} : {rotate: '180deg'}} alt="" /></button>}
-                            {sortState !== 0 && <button type="button" onClick={clearSort}><img src={require("./..\\img\\closeBlack.png")} alt="" /></button>}
+                            {sortState === 0 && <button type="submit"><img src={require("./../img/sort.png")} alt="" /></button>}
+                            {sortState !== 0 && <button type="button" onClick={reverseSort}><img src={require("./../img/upArrow.png")} style={sortState === 1 ? {} : {rotate: '180deg'}} alt="" /></button>}
+                            {sortState !== 0 && <button type="button" onClick={clearSort}><img src={require("./../img/closeBlack.png")} alt="" /></button>}
                         </form>
                         <form onSubmit={handleListSearch} className="search-form">
                             <div>
@@ -267,8 +267,8 @@ const CollapsibleEventList = ({title, eventLists, getOlder, getNewer}) => {
                                     <option value="description">Description</option>
                                     <option value="tags">Tags</option>
                                 </select>
-                                {!activeSearch && <button type='submit'><img src={require("./..\\img\\search.png")} alt="" /></button>}
-                                {activeSearch && <button onClick={cancelSearch}><img src={require("./..\\img\\closeBlack.png")} alt="" /></button>}
+                                {!activeSearch && <button type='submit'><img src={require("./../img/search.png")} alt="" /></button>}
+                                {activeSearch && <button onClick={cancelSearch}><img src={require("./../img/closeBlack.png")} alt="" /></button>}
                             </div>
                         </form>
                     </div>
@@ -299,8 +299,8 @@ const CollapsibleEventList = ({title, eventLists, getOlder, getNewer}) => {
                         </div>}
                         {(page !== 0) && 
                         <div>
-                            <button onClick={pageToZero}><img src={require("./..\\img\\leftStart.png")} alt="" /></button>
-                            <button onClick={pageLeft}><img src={require("./..\\img\\pageLeft.png")} alt="" /></button>
+                            <button onClick={pageToZero}><img src={require("./../img/leftStart.png")} alt="" /></button>
+                            <button onClick={pageLeft}><img src={require("./../img/pageLeft.png")} alt="" /></button>
                         </div>}  
                     </div>
                     <div className="page-num-container"> 
@@ -315,8 +315,8 @@ const CollapsibleEventList = ({title, eventLists, getOlder, getNewer}) => {
                     <div style={{display: "flex", justifyContent: "center"}}>
                         {((pageCount % 1 !== 0 && page !== Math.floor(pageCount)) || (pageCount % 1 === 0 && page !== Math.floor(pageCount - 1))) && 
                         <div>
-                            <button onClick={pageRight} ><img src={require("./..\\img\\pageRight.png")} alt="" /></button>
-                            <button onClick={pageToMax} ><img src={require("./..\\img\\rightEnd.png")} alt="" /></button>
+                            <button onClick={pageRight} ><img src={require("./../img/pageRight.png")} alt="" /></button>
+                            <button onClick={pageToMax} ><img src={require("./../img/rightEnd.png")} alt="" /></button>
                         </div>}
                         {((getOlder) && !(eventLists.length < 1) && ((pageCount % 1 !== 0 && page === Math.floor(pageCount)) || (pageCount % 1 === 0 && page === Math.floor(pageCount - 1)))) &&
                         <div>

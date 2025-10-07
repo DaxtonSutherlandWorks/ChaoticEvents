@@ -420,7 +420,7 @@ const CreateList = () => {
                     <div className="tag-container">                       
                         {tags && tags.map((tag) => (
                                 <div style={{backgroundColor: newListThemeColor[1]}}>
-                                    <img className="tag-delete-button" onClick={(event) => handleTagDelete(event)} src={require("./..\\img\\closeBlack.png")} alt="" />
+                                    <img className="tag-delete-button" onClick={(event) => handleTagDelete(event)} src={require("./../img/closeBlack.png")} alt="" />
                                     <p>{tag}</p>
                                 </div>
                             ))}

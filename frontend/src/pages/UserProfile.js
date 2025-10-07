@@ -222,11 +222,11 @@ const UserProfile = () => {
                       </div>}
             {userProfile && <div>
                 <div className="username-container">
-                    {(owned && !editUsernameMode) && <img onClick={handleEditUsernameClick} src={require("./..\\img\\pencil.png")} />}
+                    {(owned && !editUsernameMode) && <img onClick={handleEditUsernameClick} src={require("./../img/pencil.png")} />}
                     {!editUsernameMode && <h1 style={{fontSize: "3em"}}>{userProfile.userName}</h1>}
                     {editUsernameMode && <form className="username-container" onSubmit={handleSaveUsernameClick}>
-                        <button onClick={cancelUserNameEdit}><img src={require("./..\\img\\closeBlack.png")} /></button>
-                        <button type="submit"><img src={require("./..\\img\\save.png")} /></button>
+                        <button onClick={cancelUserNameEdit}><img src={require("./../img/closeBlack.png")} /></button>
+                        <button type="submit"><img src={require("./../img/save.png")} /></button>
                         <input id="username-field" name="username-field" placeholder="Type new Username here" type="text" pattern="\S(.*\S)?" title="Username must not be only whitespace" required="true"></input>
                     </form>
                     }
@@ -245,10 +245,10 @@ const UserProfile = () => {
                     <p style={{gridColumn: "span 3"}}><span style={{fontWeight: "bold"}}>Total Likes Gathered:</span> {userProfile.totalPos}</p>
                 </div>
                 <div className="snapshot-title-container">
-                    {(owned && !editSnapshotMode) && <img onClick={handleEditSnapshotClick} src={require("./..\\img\\pencil.png")} />}
+                    {(owned && !editSnapshotMode) && <img onClick={handleEditSnapshotClick} src={require("./../img/pencil.png")} />}
                     {(owned && editSnapshotMode) && <div>
-                        <button onClick={cancelSnapshotEdit}><img src={require("./..\\img\\closeBlack.png")} /></button>
-                        <button type="submit" form="snapshot-form"><img src={require("./..\\img\\save.png")} /></button>
+                        <button onClick={cancelSnapshotEdit}><img src={require("./../img/closeBlack.png")} /></button>
+                        <button type="submit" form="snapshot-form"><img src={require("./../img/save.png")} /></button>
                     </div>}
                     <h1>Snapshot</h1>
                 </div>

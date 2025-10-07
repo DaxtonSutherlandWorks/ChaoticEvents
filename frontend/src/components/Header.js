@@ -50,7 +50,7 @@ const Header = () => {
         <div className="navbar" id="navbar">
             <div>
                 <Link to="/" >
-                    <img className="header-logo" src={require("./..\\img\\CE Logo.png")} alt="Site logo" />
+                    <img className="header-logo" src={require("./../img/CE Logo.png")} alt="Site logo" />
                 </Link>
             </div>
             <div>
@@ -59,36 +59,36 @@ const Header = () => {
             <div style={{"marginLeft":"auto", display:"flex"}}>
                 {userToken && 
                     <Link reloadDocument to={'/userprofile/'+user.userName} >
-                        <img title="Account" src={require("./..\\img\\accountCircle.png")} className="nav-icon" alt=""/>
+                        <img title="Account" src={require("./../img/accountCircle.png")} className="nav-icon" alt=""/>
                     </Link>}
-                {!hamburgerOpen && <img onClick={hamburgerMenuClick} style={{left:"50px"}} src={require("./..\\img\\hamburgerMenu.png")} className="nav-icon" alt="Hamburger Menu"></img>}
+                {!hamburgerOpen && <img onClick={hamburgerMenuClick} style={{left:"50px"}} src={require("./../img/hamburgerMenu.png")} className="nav-icon" alt="Hamburger Menu"></img>}
             </div>
             <div className="hamburger-menu" id="hamburger-menu">
                 <div onClick={hamburgerMenuClick}>
-                    <img src={require("./..\\img\\close.png")} alt="Hamburger Menu"></img>
+                    <img src={require("./../img/close.png")} alt="Hamburger Menu"></img>
                     <h1>Close</h1>
                 </div>
                 <Link to="/" onClick={hamburgerMenuClick} style={{ textDecoration: 'none', color: 'black'}}>
                     <div>
-                        <img src={require("./..\\img\\home.png")} alt="" />
+                        <img src={require("./../img/home.png")} alt="" />
                         <h1>Home</h1>
                     </div>
                 </Link>
                 <Link to="/about" onClick={hamburgerMenuClick} style={{ textDecoration: 'none', color: 'black'}}>
                     <div>
-                        <img src={require("./..\\img\\info.png")} alt="" />
+                        <img src={require("./../img/info.png")} alt="" />
                         <h1>About</h1>
                     </div>
                 </Link>
                 {!userToken && <div> 
                             <Link to="/loginsignup" onClick={hamburgerMenuClick} style={{all:'inherit', borderBottom:'none'}}>
-                                <img src={require("./..\\img\\newList.png")} alt="" />
+                                <img src={require("./../img/newList.png")} alt="" />
                                 <h1>Create List</h1>
                             </Link>
                         </div>}
                 {userToken && <div>
                             <Link to="/createlist" onClick={hamburgerMenuClick} style={{all:'inherit', borderBottom:'none'}}>
-                                <img src={require("./..\\img\\newList.png")} alt="" />
+                                <img src={require("./../img/newList.png")} alt="" />
                                 <h1>Create List</h1>
                             </Link>
                         </div>
@@ -96,14 +96,14 @@ const Header = () => {
                 {!userToken &&
                 <div style={{"borderBottom":"0px"}}>
                     <Link to="/loginsignup" onClick={hamburgerMenuClick} style={{all:'inherit'}}>
-                        <img title="Login" src={require("./..\\img\\login.png")} alt="" />
+                        <img title="Login" src={require("./../img/login.png")} alt="" />
                         <h1>Login/Signup</h1>
                     </Link>
                 </div>}
                 {userToken &&
                 <div style={{"borderBottom":"0px"}}>
                     <Link to="/loginsignup" style={{all: "inherit"}} onClick={logoutClick}>
-                        <img title="Login" src={require("./..\\img\\login.png")} alt="" />
+                        <img title="Login" src={require("./../img/login.png")} alt="" />
                         <h1>Logout</h1>
                     </Link>
                 </div>}
