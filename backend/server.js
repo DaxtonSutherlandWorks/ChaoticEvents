@@ -16,7 +16,7 @@ const app = express();
 
 
 // Middleware
-app.use(cors());
+app.use(cors('chaoticevents-frontend.onrender.com'));
 app.use(express.json());
 
 app.use((req, res, next) => {
