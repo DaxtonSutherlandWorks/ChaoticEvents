@@ -419,7 +419,7 @@ const ListView = (userName) => {
             <div className="roll-container">
                 <button className={(availableEvents.length > 0) ? "roll-button" : "disabled-roll-button"} onClick={handleRollClick} disabled={!(availableEvents.length > 0)}>
                     <p>Roll!</p>
-                    <img src={require("./..\\img\\die.png")} alt="" />
+                    <img src={require("./../img/die.png")} alt="" />
                 </button>
             </div>
             <div className="action-button-container">
@@ -429,10 +429,10 @@ const ListView = (userName) => {
                 <button onClick={handleDeselectClick} disabled={!selectedEvent}>Deselect Event</button>
                 <div className="rating-box">
                     <p>Rate List: </p>
-                    <img id='like-button' onClick={handleFavorClick} src={favor === 1 ? require("./..\\img\\greenLike.png"): require("./..\\img\\like.png")} alt="" />
+                    <img id='like-button' onClick={handleFavorClick} src={favor === 1 ? require("./../img/greenLike.png"): require("./../img/like.png")} alt="" />
                     <p>|</p>
-                    <img id='dislike-button' onClick={handleFavorClick} src={favor === -1 ? require("./..\\img\\redDislike.png") : require("./..\\img\\dislike.png")} alt="" />
-                </div>                
+                    <img id='dislike-button' onClick={handleFavorClick} src={favor === -1 ? require("./../img/redDislike.png") : require("./../img/dislike.png")} alt="" />
+                </div>        
             </div>
             
             {owned && <div className="user-button-container">
