@@ -16,11 +16,11 @@ const app = express();
 
 
 // Middleware
-app.use(cors('chaoticevents-frontend.onrender.com'));
+app.use(cors('https://chaoticevents-frontend.onrender.com'));
 app.use(express.json());
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'chaoticevents-frontend.onrender.com');
+    res.header('Access-Control-Allow-Origin', 'https://chaoticevents-frontend.onrender.com');
     next();
 });
 
