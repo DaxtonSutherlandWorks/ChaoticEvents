@@ -17,5 +17,5 @@
     "backend-build": "npm install",
     "build": "npm run frontend-build && npm run backend-build",
     "dev":   "nodemon server.js"
-}
+  }
 }
