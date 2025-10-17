@@ -26,11 +26,11 @@ const Home = () => {
 
             if (!browserCursor)
             {
-                response = await fetch('https://chaoticevents.onrender.com/api/eventLists');
+                response = await fetch('http://localhost:4000/api/eventLists');
             }
 
             else {
-                response = await fetch('https://chaoticevents.onrender.com/api/eventLists', {
+                response = await fetch('http://localhost:4000/api/eventLists', {
                     headers: {
                         'Cursor': browserCursor
                     }
@@ -62,7 +62,7 @@ const Home = () => {
     const fetchNewestEvents = async () => {
             let response;
 
-            response = await fetch('https://chaoticevents.onrender.com/api/eventLists');
+            response = await fetch('http://localhost:4000/api/eventLists');
             
             const json = await response.json();
     
@@ -88,7 +88,7 @@ const Home = () => {
      */
     const fetchUserLists = async () => {
 
-            const response = await fetch('https://chaoticevents.onrender.com/api/eventLists/user', {
+            const response = await fetch('http://localhost:4000/api/eventLists/user', {
                 headers: {
                 'Authorization': `Bearer ${userToken.token}`
                 }
@@ -107,7 +107,7 @@ const Home = () => {
      */
     const fetchSavedLists = async () => {
 
-            const response = await fetch('https://chaoticevents.onrender.com/api/user/'+jwtDecode(userToken.token).email+'/savedLists', {
+            const response = await fetch('http://localhost:4000/api/user/'+jwtDecode(userToken.token).email+'/savedLists', {
                 headers: {
                     'Authorization': `Bearer ${userToken.token}`
                     }

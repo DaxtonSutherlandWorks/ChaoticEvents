@@ -43,7 +43,7 @@ const ListView = (userName) => {
         
         const fetchAuthorProfile = async () => {
 
-            const response = await fetch('https://chaoticevents.onrender.com/api/user/getProfile/'+location.state.author, {
+            const response = await fetch('http://localhost:4000/api/user/getProfile/'+location.state.author, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -68,7 +68,7 @@ const ListView = (userName) => {
         // Redefined here because of async funniness when used outside of a useEffect.
         const fetchAuthorProfile = async () => {
 
-            const response = await fetch('https://chaoticevents.onrender.com/api/user/getProfile/'+location.state.author, {
+            const response = await fetch('http://localhost:4000/api/user/getProfile/'+location.state.author, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -82,7 +82,7 @@ const ListView = (userName) => {
             }
         }
 
-        const response = await fetch('https://chaoticevents.onrender.com/api/user/interactions/'+user._id, {
+        const response = await fetch('http://localhost:4000/api/user/interactions/'+user._id, {
             headers: {
                 'Authorization': `Bearer ${userToken.token}`
             }
@@ -265,7 +265,7 @@ const ListView = (userName) => {
 
         if (event.nativeEvent.submitter.id ==="popup-yes") {
             
-            const response = await fetch('https://chaoticevents.onrender.com/api/eventLists/edit/'+location.state._id, {
+            const response = await fetch('http://localhost:4000/api/eventLists/edit/'+location.state._id, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -291,7 +291,7 @@ const ListView = (userName) => {
 
         try
         {
-            const response = await fetch('https://chaoticevents.onrender.com/api/user/updateInteractions', {
+            const response = await fetch('http://localhost:4000/api/user/updateInteractions', {
                 method: 'PATCH',
                 body: JSON.stringify(updatePayload),
                 headers: {
@@ -319,7 +319,7 @@ const ListView = (userName) => {
 
         try
         {
-            const response = await fetch('https://chaoticevents.onrender.com/api/user/updateInteractions', {
+            const response = await fetch('http://localhost:4000/api/user/updateInteractions', {
                 method: 'PATCH',
                 body: JSON.stringify(updatePayload),
                 headers: {
@@ -384,7 +384,7 @@ const ListView = (userName) => {
 
         const updatePayload = {list: location.state, userID: user._id, userToken: userToken, netFavor: netFavor, mode: 'FAVOR'};
 
-        const response = await fetch('https://chaoticevents.onrender.com/api/user/updateInteractions', {
+        const response = await fetch('http://localhost:4000/api/user/updateInteractions', {
             method: 'PATCH',
             body: JSON.stringify(updatePayload),
             headers: {
