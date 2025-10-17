@@ -43,7 +43,7 @@ const ListView = (userName) => {
         
         const fetchAuthorProfile = async () => {
 
-            const response = await fetch('http://localhost:4000/api/user/getProfile/'+location.state.author, {
+            const response = await fetch('http://107.21.101.56:4000/api/user/getProfile/'+location.state.author, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -68,7 +68,7 @@ const ListView = (userName) => {
         // Redefined here because of async funniness when used outside of a useEffect.
         const fetchAuthorProfile = async () => {
 
-            const response = await fetch('http://localhost:4000/api/user/getProfile/'+location.state.author, {
+            const response = await fetch('http://107.21.101.56:4000/api/user/getProfile/'+location.state.author, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -82,7 +82,7 @@ const ListView = (userName) => {
             }
         }
 
-        const response = await fetch('http://localhost:4000/api/user/interactions/'+user._id, {
+        const response = await fetch('http://107.21.101.56:4000/api/user/interactions/'+user._id, {
             headers: {
                 'Authorization': `Bearer ${userToken.token}`
             }
@@ -265,7 +265,7 @@ const ListView = (userName) => {
 
         if (event.nativeEvent.submitter.id ==="popup-yes") {
             
-            const response = await fetch('http://localhost:4000/api/eventLists/edit/'+location.state._id, {
+            const response = await fetch('http://107.21.101.56:4000/api/eventLists/edit/'+location.state._id, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -291,7 +291,7 @@ const ListView = (userName) => {
 
         try
         {
-            const response = await fetch('http://localhost:4000/api/user/updateInteractions', {
+            const response = await fetch('http://107.21.101.56:4000/api/user/updateInteractions', {
                 method: 'PATCH',
                 body: JSON.stringify(updatePayload),
                 headers: {
@@ -319,7 +319,7 @@ const ListView = (userName) => {
 
         try
         {
-            const response = await fetch('http://localhost:4000/api/user/updateInteractions', {
+            const response = await fetch('http://107.21.101.56:4000/api/user/updateInteractions', {
                 method: 'PATCH',
                 body: JSON.stringify(updatePayload),
                 headers: {
@@ -384,7 +384,7 @@ const ListView = (userName) => {
 
         const updatePayload = {list: location.state, userID: user._id, userToken: userToken, netFavor: netFavor, mode: 'FAVOR'};
 
-        const response = await fetch('http://localhost:4000/api/user/updateInteractions', {
+        const response = await fetch('http://107.21.101.56:4000/api/user/updateInteractions', {
             method: 'PATCH',
             body: JSON.stringify(updatePayload),
             headers: {
@@ -423,16 +423,16 @@ const ListView = (userName) => {
                 </button>
             </div>
             <div className="action-button-container">
-                {!saved && <button disabled={owned} onClick={handleSaveClick}>Save List</button>}
-                {saved && <button disabled={owned} onClick={handleUnsaveClick}>Unsave List</button>}
+                {(!saved && user != null) && <button disabled={owned} onClick={handleSaveClick}>Save List</button>}
+                {(saved && user != null) && <button disabled={owned} onClick={handleUnsaveClick}>Unsave List</button>}
                 <button onClick={handleResetClick}>Reset List</button>
                 <button onClick={handleDeselectClick} disabled={!selectedEvent}>Deselect Event</button>
-                <div className="rating-box">
+                {user != null && <div className="rating-box">
                     <p>Rate List: </p>
                     <img id='like-button' onClick={handleFavorClick} src={favor === 1 ? require("./../img/greenLike.png"): require("./../img/like.png")} alt="" />
                     <p>|</p>
                     <img id='dislike-button' onClick={handleFavorClick} src={favor === -1 ? require("./../img/redDislike.png") : require("./../img/dislike.png")} alt="" />
-                </div>        
+                </div>}        
             </div>
             
             {owned && <div className="user-button-container">
