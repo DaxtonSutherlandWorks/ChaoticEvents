@@ -16,7 +16,7 @@ const app = express();
 
 
 // Middleware
-app.use(cors('localhost:3000'));
+app.use(cors('http://107.21.101.56:3000'));
 app.use(express.json());
 
 app.use((req, res, next) => {
