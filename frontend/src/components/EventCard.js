@@ -25,11 +25,12 @@ const EventCard = ({id, event, selectable, className, handleClick, handleDelete,
                 style={selectable ? {} : {textAlign: 'left'}} >
                 <div className='title-container'>
                     <h2 style={{backgroundColor: event.titleColor}}>#{event.dieNum} {event.title}</h2>
-                    {handleEdit && <img className="event-action-button" onClick={(event) => handleEdit(event)} src={require("./../img/pencil.png")} alt="" />}
-                    {handleDelete && <img className="event-action-button" onClick={(event) => handleDelete(event)} src={require("./../img/trash.png")} alt="" />}
-                    
+                    <div style={{marginLeft: "auto"}}>
+                        {handleEdit && <img className="event-action-button" onClick={(event) => handleEdit(event)} src={require("./../img/pencil.png")} alt="" />}
+                        {handleDelete && <img className="event-action-button" onClick={(event) => handleDelete(event)} src={require("./../img/trash.png")} alt="" />}
+                    </div>                    
                 </div>
-                <p>{event.body}</p>
+                <p style={{fontSize: "larger"}}>{event.body}</p>
             </button>
         </div>
         

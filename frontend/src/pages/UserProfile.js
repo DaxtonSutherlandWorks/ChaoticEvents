@@ -24,21 +24,9 @@ const UserProfile = () => {
     const {userToken, user, dispatch} = useAuthContext();
 
     /**
-     * Use effect to fetch users events with respect to privacy based on whether the viewer is the user, and fetch the user profile.
+     * Use effect to fetch the user profile and their public events.
      */
     useEffect(() => {
-        
-        // Fetcher for only public events
-        const fetchPublicUserEventLists = async () => {
-
-            const response = await fetch('http://107.21.101.56:4000/api/eventLists/userPublic/'+userName);
-    
-            const json = await response.json();            
-
-            if (response.ok) {
-                setUserLists(json);
-            }
-        }
 
         // Fetcher for user profile
         const fetchUserProfile = async () => {
@@ -55,19 +43,39 @@ const UserProfile = () => {
             }
         }
 
-        // Checks if the viewer is the user, gets all lists if so, only public otherwise
-        if (user)
-        {
-            fetchPublicUserEventLists();
-        }
-        else
-        {
-            fetchPublicUserEventLists();
+        // Fetcher for only public events
+        const fetchPublicUserEventLists = async () => {
+
+            const response = await fetch('http://107.21.101.56:4000/api/eventLists/userPublic/'+userName);
+    
+            const json = await response.json();            
+
+            if (response.ok) {
+                setUserLists(json);
+            }
         }
 
         fetchUserProfile();
+        fetchPublicUserEventLists();
         
     }, [user]);
+
+    /**
+     * Use effect that sets ownership
+     */
+    useEffect(() => {
+
+        // Checks if the viewer is the user, gets all lists if so, only public otherwise
+        if (user && userProfile)
+        {
+            if (user.userName === userProfile.userName)
+            {
+                setOwned(true);
+                
+            }
+        }
+  
+    }, [userProfile]);
 
     // User profile fetcher redefined here because UseEffects are funny with async functions
     const fetchUserProfile = async () => {

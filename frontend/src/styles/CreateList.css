@@ -60,10 +60,14 @@
     margin-bottom: 5px;
 }
 
+.event-form-container input {
+    font-size: larger;
+}
+
 .event-form-container textarea {
     width: 80%;
     height: 200px;
-    font-size: large;
+    font-size: larger;
 }
 
 .add-button {
@@ -111,6 +115,7 @@
 
 .list-title input {
     margin-inline: 5%;
+    font-size: large;
 }
 
 .list-description-container {
@@ -128,6 +133,7 @@
     width: 80%;
     height: 100px;
     margin: 2%;
+    font-size: large;
 }
 
 .new-events-box {
@@ -203,7 +209,6 @@
     display: grid;
     color: black;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: fit-content(25%);
     column-gap: 10px;
     row-gap: 10px;
 }
