@@ -14,7 +14,7 @@ const EventList = ({ eventList }) => {
     return ( 
         <div>
             <br />
-            <Link to='/ListView' state={eventList} style={{all:'inherit'}} onClick={() => window.scrollTo(0,0)}>
+            <Link to='/chaoticEvents/ListView' state={eventList} style={{all:'inherit'}} onClick={() => window.scrollTo(0,0)}>
                 <div className="event-list-card">
                     <div className="title-box" style={eventList.tags.length > 0 ? 
                         {backgroundColor: eventList.colorTheme[0],

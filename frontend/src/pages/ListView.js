@@ -410,7 +410,7 @@ const ListView = (userName) => {
                             </div>
                         </form>
                       </div>}
-            <h1 style={{textAlign: 'center', margin: '2%'}}>Currently Viewing: {location.state.title} by <Link to={'/userprofile/'+location.state.author}>{location.state.author}</Link></h1>
+            <h1 style={{textAlign: 'center', margin: '2%'}}>Currently Viewing: {location.state.title} by <Link to={'/chaoticEvents/userprofile/'+location.state.author}>{location.state.author}</Link></h1>
             <h1 style={{textAlign: 'center', margin: '2%'}}>Selected Event: {selectedEvent ? selectedEvent.title: 'None'}</h1>
             <div className='selected-event-container'>
                 {!selectedEvent && <h2 className="event-placeholder" id="test">No Selected Event</h2>}

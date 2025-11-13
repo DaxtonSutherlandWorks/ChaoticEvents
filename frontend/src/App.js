@@ -38,33 +38,37 @@ function App() {
           <div className='content-card'>
             <Routes>
               <Route
-                path="/"
+                path="/chaoticEvents"
                 element={<Home />}>
 
               </Route>
               <Route
-                path="/about"
+                path="/chaoticEvents/about"
                 element={<About />}>
                 
               </Route>
               <Route
-                path="/loginsignup"
-                element={userToken ? <Navigate to="/" /> : <LoginSignup />}>
+                path="/chaoticEvents/loginsignup"
+                element={userToken ? <Navigate to="/chaoticEvents" /> : <LoginSignup />}>
 
               </Route>
               <Route
-                path="/ListView"
+                path="/chaoticEvents/ListView"
                 element={<ListView />}>
         
               </Route>
               <Route
-                path="/createlist"
+                path="/chaoticEvents/createlist"
                 element={<CreateList />}>
               </Route>
               <Route
-                path="/userprofile/:userName"
+                path="/chaoticEvents/userprofile/:userName"
                 element={<UserProfile />}>
 
+              </Route>
+              <Route
+                path="*"
+                element={<Navigate to="/chaoticEvents" replace/>}>
               </Route>
             </Routes>
           </div>

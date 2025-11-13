@@ -68,26 +68,26 @@ const Header = () => {
                     <img src={require("./../img/close.png")} alt="Hamburger Menu"></img>
                     <h1>Close</h1>
                 </div>
-                <Link to="/" onClick={hamburgerMenuClick} style={{ textDecoration: 'none', color: 'black'}}>
+                <Link to="/chaoticEvents" onClick={hamburgerMenuClick} style={{ textDecoration: 'none', color: 'black'}}>
                     <div>
                         <img src={require("./../img/home.png")} alt="" />
                         <h1>Home</h1>
                     </div>
                 </Link>
-                <Link to="/about" onClick={hamburgerMenuClick} style={{ textDecoration: 'none', color: 'black'}}>
+                <Link to="/chaoticEvents/about" onClick={hamburgerMenuClick} style={{ textDecoration: 'none', color: 'black'}}>
                     <div>
                         <img src={require("./../img/info.png")} alt="" />
                         <h1>About</h1>
                     </div>
                 </Link>
                 {!userToken && <div> 
-                            <Link to="/loginsignup" onClick={hamburgerMenuClick} style={{all:'inherit', borderBottom:'none'}}>
+                            <Link to="/chaoticEvents/loginsignup" onClick={hamburgerMenuClick} style={{all:'inherit', borderBottom:'none'}}>
                                 <img src={require("./../img/newList.png")} alt="" />
                                 <h1>Create List</h1>
                             </Link>
                         </div>}
                 {userToken && <div>
-                            <Link to="/createlist" onClick={hamburgerMenuClick} style={{all:'inherit', borderBottom:'none'}}>
+                            <Link to="/chaoticEvents/createlist" onClick={hamburgerMenuClick} style={{all:'inherit', borderBottom:'none'}}>
                                 <img src={require("./../img/newList.png")} alt="" />
                                 <h1>Create List</h1>
                             </Link>
@@ -95,14 +95,14 @@ const Header = () => {
                 }
                 {!userToken &&
                 <div style={{"borderBottom":"0px"}}>
-                    <Link to="/loginsignup" onClick={hamburgerMenuClick} style={{all:'inherit'}}>
+                    <Link to="/chaoticEvents/loginsignup" onClick={hamburgerMenuClick} style={{all:'inherit'}}>
                         <img title="Login" src={require("./../img/login.png")} alt="" />
                         <h1>Login/Signup</h1>
                     </Link>
                 </div>}
                 {userToken &&
                 <div style={{"borderBottom":"0px"}}>
-                    <Link to="/loginsignup" style={{all: "inherit"}} onClick={logoutClick}>
+                    <Link to="/chaoticEvents/loginsignup" style={{all: "inherit"}} onClick={logoutClick}>
                         <img title="Login" src={require("./../img/login.png")} alt="" />
                         <h1>Logout</h1>
                     </Link>
