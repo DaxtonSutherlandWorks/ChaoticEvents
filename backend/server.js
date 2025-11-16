@@ -3,7 +3,10 @@
  */
 
 require('dotenv').config();
+
+const https = require('https')
 const cors = require("cors");
+const fs = require('fs');
 
 const eventListRoutes = require('./routes/eventLists');
 const userRoutes = require('./routes/user');
@@ -13,10 +16,13 @@ const mongoose = require('mongoose');
 // Express app
 const app = express();
 
-
+const options = {
+    cert: fs.readFileSynce(process.env.CERT_PATH, 'utf-8'),
+    key: fs.readFileSynce(process.env.KEY_PATH, 'utf-8'),
+};
 
 // Middleware
-app.use(cors('http://107.21.101.56:3000'));
+app.use(cors('https://www.daxtonsutherlandworks.com:3000'));
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -31,8 +37,8 @@ app.use('/api/user', userRoutes);
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         // Listen for requests once connected to db
-        app.listen(process.env.PORT, () => {
-            console.log('connected to db and listening on port 4000');
+        https.createServer(options, app).listen(process.env.PORT, () => {
+            console.log('connected to db and listening on port 4000 through https');
         })
     })   
     .catch((error) => {
