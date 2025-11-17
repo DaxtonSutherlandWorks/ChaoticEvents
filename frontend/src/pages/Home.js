@@ -26,11 +26,11 @@ const Home = () => {
 
             if (!browserCursor)
             {
-                response = await fetch('https://daxtonsutherlandworks.com:4000/api/eventLists');
+                response = await fetch(window.$apiURI+'/api/eventLists');
             }
 
             else {
-                response = await fetch('https://daxtonsutherlandworks.com:4000/api/eventLists', {
+                response = await fetch(window.$apiURI+'/api/eventLists', {
                     headers: {
                         'Cursor': browserCursor
                     }
@@ -62,7 +62,7 @@ const Home = () => {
     const fetchNewestEvents = async () => {
             let response;
 
-            response = await fetch('https://daxtonsutherlandworks.com:4000/api/eventLists');
+            response = await fetch(window.$apiURI+'/api/eventLists');
             
             const json = await response.json();
     
@@ -88,7 +88,7 @@ const Home = () => {
      */
     const fetchUserLists = async () => {
 
-            const response = await fetch('https://daxtonsutherlandworks.com:4000/api/eventLists/user', {
+            const response = await fetch(window.$apiURI+'/api/eventLists/user', {
                 headers: {
                 'Authorization': `Bearer ${userToken.token}`
                 }
@@ -107,7 +107,7 @@ const Home = () => {
      */
     const fetchSavedLists = async () => {
 
-            const response = await fetch('https://daxtonsutherlandworks.com:4000/api/user/'+jwtDecode(userToken.token).email+'/savedLists', {
+            const response = await fetch(window.$apiURI+'/api/user/'+jwtDecode(userToken.token).email+'/savedLists', {
                 headers: {
                     'Authorization': `Bearer ${userToken.token}`
                     }

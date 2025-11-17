@@ -58,7 +58,7 @@ const Header = () => {
             </div>
             <div style={{"marginLeft":"auto", display:"flex"}}>
                 {userToken && 
-                    <Link reloadDocument to={'/userprofile/'+user.userName} >
+                    <Link reloadDocument to={'chaoticEvents/userprofile/'+user.userName} >
                         <img title="Account" src={require("./../img/accountCircle.png")} className="nav-icon" alt=""/>
                     </Link>}
                 {!hamburgerOpen && <img onClick={hamburgerMenuClick} style={{left:"50px"}} src={require("./../img/hamburgerMenu.png")} className="nav-icon" alt="Hamburger Menu"></img>}

@@ -66,7 +66,7 @@ const CreateList = () => {
                 if (newList.length === 0 && !wipLoaded)
                 {
                     // Fetching WIPList
-                    const response = await fetch('https://daxtonsutherlandworks.com:4000/api/user/'+user.email+'/getWIP', {
+                    const response = await fetch(window.$apiURI+'/api/user/'+user.email+'/getWIP', {
                         headers: {
                             'Authorization': `Bearer ${userToken.token}`
                         }
@@ -99,7 +99,7 @@ const CreateList = () => {
                 else
                 {
                     // Updating the user's WIPList to be current to their progress.
-                    const response = await fetch('https://daxtonsutherlandworks.com:4000/api/user/setWIP', {
+                    const response = await fetch(window.$apiURI+'/api/user/setWIP', {
                         method: "POST",
                         body: JSON.stringify({
                             email: user.email,
@@ -285,7 +285,7 @@ const CreateList = () => {
 
         let newEventList = {'title': newName, 'author': user.userName, 'description':newDescription, 'rating': [0,0], 'events': newList, 'colorTheme': newTheme, 'tags': tags, 'public': publicChecked};
         
-        const response = await fetch('https://daxtonsutherlandworks.com:4000/api/eventLists', {
+        const response = await fetch(window.$apiURI+'/api/eventLists', {
                 method: 'POST',
                 body: JSON.stringify(newEventList),
                 headers: {
@@ -318,7 +318,7 @@ const CreateList = () => {
 
         let editedEventList = {'title': editedName, 'author': user.userName, 'description':editedDescription, 'rating': [0,0], 'events': newList, 'colorTheme': editedTheme, 'tags': tags, 'public': publicChecked};
 
-        const response = await fetch('https://daxtonsutherlandworks.com:4000/api/eventLists/edit/'+location.state._id, {
+        const response = await fetch(window.$apiURI+'/api/eventLists/edit/'+location.state._id, {
             method: 'PATCH',
             body: JSON.stringify(editedEventList),
             headers: {
